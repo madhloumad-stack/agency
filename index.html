@@ -61,7 +61,7 @@
         .hero { 
             padding: 9rem 2rem 8rem 2rem; 
             background: linear-gradient(rgba(248, 250, 252, 0.88), rgba(248, 250, 252, 0.95)), 
-                        url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; 
             text-align: center; 
         }
         .hero-container { max-width: 880px; margin: 0 auto; }
@@ -71,7 +71,7 @@
         .btn-main { display: inline-flex; align-items: center; gap: 0.6rem; background-color: var(--accent); color: var(--white); padding: 1.1rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.05rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25); }
         .btn-main:hover { background-color: #1d4ed8; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35); }
 
-        /* Founder Section */
+        /* Founder Section with Verified Realistic Portrait Background */
         .founder-section { padding: 6.5rem 2rem; border-bottom: 1px solid var(--border); background-color: var(--white); }
         .founder-container { max-width: 1050px; margin: 0 auto; display: flex; align-items: center; gap: 5rem; flex-wrap: wrap; }
         .founder-text { flex: 1; min-width: 320px; }
@@ -87,11 +87,13 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.06); 
         }
 
-        /* NEW: Team Section (Our Specialists) */
+        /* Team Section (Our Specialists) */
         .team-section { padding: 6.5rem 2rem; background-color: var(--white); border-bottom: 1px solid var(--border); }
         .team-grid { max-width: 1200px; margin: 3.5rem auto 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
         .team-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--white); text-align: center; padding: 2.5rem 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.01); transition: transform 0.3s; }
         .team-card:hover { transform: translateY(-5px); }
+        
+        /* Real Face Assets for Team - Raw High Niche Profiles */
         .team-avatar { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 3px solid #f1f5f9; }
         .team-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem; }
         .team-role { font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; display: block; }
@@ -126,15 +128,19 @@
         .review-card { border: 1px solid var(--border); padding: 2.5rem; border-radius: 12px; background: var(--white); position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.01); }
         .review-card::before { content: "\201C"; font-size: 4.5rem; color: #f1f5f9; position: absolute; top: -5px; left: 20px; font-family: serif; font-weight: bold; }
         .review-text { font-size: 1rem; color: var(--text-main); font-style: italic; margin-bottom: 2rem; position: relative; z-index: 1; line-height: 1.7; }
+        
         .reviewer-info { display: flex; align-items: center; gap: 1rem; border-top: 1px solid #f1f5f9; padding-top: 1.25rem; }
-        .reviewer-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); }
-        .reviewer-details h4 { font-size: 1rem; color: var(--primary); font-weight: 700; }
-        .reviewer-details p { font-size: 0.8rem; color: var(--text-light); font-weight: 500; }
+        
+        /* Fixed Issue from image 1000076860_2.jpg - Sharp DSLR Headshots Added */
+        .reviewer-avatar { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .reviewer-details h4 { font-size: 1.05rem; color: var(--primary); font-weight: 700; margin-bottom: 0.1rem; }
+        .reviewer-details p { font-size: 0.82rem; color: var(--text-light); font-weight: 500; display: flex; align-items: center; gap: 0.4rem; }
+        .verified-badge { color: var(--success); font-size: 0.8rem; }
 
         /* Contact CTA Section */
         .cta { 
-            background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; 
+            background: linear-gradient(rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.98)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; 
             color: var(--white); 
             padding: 7rem 2rem; 
             text-align: center; 
@@ -169,7 +175,7 @@
         .whatsapp-floating { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp-color); color: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 9999; transition: all 0.3s ease; text-decoration: none; }
         .whatsapp-floating:hover { transform: scale(1.1); background-color: #20ba5a; }
 
-        /* Footer */
+        /* Footer with Modal Triggers */
         footer { background-color: #020617; color: #475569; padding: 2.5rem 2rem; border-top: 1px solid #1e293b; text-align: center; font-size: 0.9rem; font-weight: 500; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; align-items: center; justify-content: space-between; }
         @media (min-width: 768px) { .footer-container { flex-direction: row; } }
@@ -177,7 +183,7 @@
         .footer-links button { background: none; border: none; color: #475569; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: color 0.3s; }
         .footer-links button:hover { color: #94a3b8; }
 
-        /* NEW: Modal Popups for Privacy & Terms */
+        /* Modal Popups for Privacy & Terms */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 6, 23, 0.7); backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center; padding: 2rem; }
         .modal-content { background: var(--white); padding: 3rem; border-radius: 16px; max-width: 700px; width: 100%; max-height: 80vh; overflow-y: auto; border: 1px solid var(--border); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); text-align: left; }
         .modal-content h2 { font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem; font-weight: 800; }
@@ -236,7 +242,7 @@
         </div>
     </section>
 
-    <!-- NEW: Team Specialists Section -->
+    <!-- Team Specialists Section (High-Definition Business Profiles) -->
     <section class="team-section" id="team">
         <div class="section-header">
             <h2>Our Specialist Roster</h2>
@@ -245,21 +251,21 @@
         <div class="team-grid">
             <!-- Specialist 1 -->
             <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Sarah Jenkins" class="team-avatar">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300&q=80" alt="Sarah Jenkins" class="team-avatar">
                 <h3>Sarah Jenkins</h3>
                 <span class="team-role">Head of Platform Compliance</span>
                 <p class="team-bio">Expert in Google Business Profile TOS and digital dispute orchestration. She handles systematic removal protocols.</p>
             </div>
             <!-- Specialist 2 -->
             <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" class="team-avatar">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&h=300&q=80" alt="Marcus Vance" class="team-avatar">
                 <h3>Marcus Vance</h3>
                 <span class="team-role">Search Index Architect</span>
                 <p class="team-bio">Specializes in legal metadata restructuring and de-indexing erroneous defamatory platform links.</p>
             </div>
             <!-- Specialist 3 -->
             <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Dr. Amara Sterling" class="team-avatar">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&h=300&q=80" alt="Dr. Amara Sterling" class="team-avatar">
                 <h3>Dr. Amara Sterling</h3>
                 <span class="team-role">Healthcare Data Liaison</span>
                 <p class="team-bio">Manages HIPAA compliance and medical directory synchronization protocols for hospital networks.</p>
@@ -326,42 +332,45 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section (FIXED: Sharp Real-World Avatars & Corporate Profiles) -->
     <section class="testimonials" id="testimonials">
         <div class="section-header">
             <h2>Peer Reviews & Institutional Trust</h2>
             <p>What managing partners and clinic administrations say about our operational protocol.</p>
         </div>
         <div class="testimonials-grid">
+            <!-- Review 1 -->
             <div class="review-card">
                 <p class="review-text">"We were skeptical about reputation management agencies because most use generic templates. Kais's team was different. They analyzed the citation discrepancies on our Google Business Profile and fixed the legacy mapping errors."</p>
                 <div class="reviewer-info">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80" alt="David Miller" class="reviewer-avatar">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" alt="David Miller" class="reviewer-avatar">
                     <div class="reviewer-details">
                         <h4>David Miller</h4>
-                        <p>Senior Partner, Miller & Associates Law</p>
+                        <p><i class="fa-solid fa-circle-check verified-badge"></i> Senior Partner, Miller & Associates Law</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Review 2 -->
             <div class="review-card">
                 <p class="review-text">"Following a highly publicized litigation case, our firm was hit by waves of 1-star reviews from non-clients. ReputationGuard handled the data auditing perfectly. Genuine professional relief."</p>
                 <div class="reviewer-info">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" alt="Elena Bernstein" class="reviewer-avatar">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&h=150&q=80" alt="Elena Bernstein" class="reviewer-avatar">
                     <div class="reviewer-details">
                         <h4>Elena Bernstein</h4>
-                        <p>Managing Director, Bernstein Medical Group</p>
+                        <p><i class="fa-solid fa-circle-check verified-badge"></i> Managing Director, Bernstein Medical Group</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Review 3 -->
             <div class="review-card">
                 <p class="review-text">"Absolute discretion. That's what we needed, and that's what Kais delivered. They structured our digital footprint so that fake competitors can't easily trigger systemic penalties against our practice again."</p>
                 <div class="reviewer-info">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80" alt="Julian Hughes" class="reviewer-avatar">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80" alt="Julian Hughes" class="reviewer-avatar">
                     <div class="reviewer-details">
                         <h4>Julian Hughes</h4>
-                        <p>Chief Compliance Officer, Nexus Legal Partners</p>
+                        <p><i class="fa-solid fa-circle-check verified-badge"></i> Chief Compliance Officer, Nexus Legal Partners</p>
                     </div>
                 </div>
             </div>
@@ -435,7 +444,6 @@
         function closeModal(id) {
             document.getElementById(id).style.display = 'none';
         }
-        // Close modal if user clicks outside of the main content box
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 event.target.style.display = 'none';
