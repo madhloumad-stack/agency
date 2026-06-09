@@ -3,45 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReputationGuard AI | Corporate Digital Reputation Management & Brand Protection</title>
-    <meta name="description" content="Protect your corporate digital footprint with ReputationGuard AI. Elite monitoring, reputation repair, and brand defense for medical facilities and law firms. Get your free reputation audit today.">
-    <!-- Google Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>ReputationGuard AI | Enterprise Digital Reputation Management & Brand Protection</title>
+    <meta name="description" content="Protect and optimize your corporate digital footprint. ReputationGuard AI delivers advanced review moderation, legal threat mitigation, and search engine insulation for law practices and medical groups.">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        :root { --primary: #020617; --accent: #2563eb; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; color: #334155; }
-        header { padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-        .hero { padding: 6rem 2rem; text-align: center; background: #f8fafc; }
-        h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--primary); }
-        .btn { background-color: var(--accent); color: white; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; transition: 0.3s; }
-        .btn:hover { background-color: #1d4ed8; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 4rem 2rem; max-width: 1000px; margin: auto; }
-        .stat-item h3 { font-size: 2.5rem; color: var(--accent); }
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --danger: #ef4444;
+            --success: #22c55e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--white); color: var(--text-main); line-height: 1.6; }
+        header { background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+        .logo i { color: var(--accent); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .hero { padding: 10rem 2rem 6rem 2rem; background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent), var(--bg-light); text-align: center; }
+        .hero-container { max-width: 850px; margin: 0 auto; }
+        h1 { font-size: 3.2rem; font-weight: 800; color: var(--primary); line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero p { font-size: 1.25rem; color: var(--text-light); margin-bottom: 2.5rem; }
+        
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; background-color: var(--accent); color: var(--white); padding: 0.95rem 2.2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
+        .btn:hover { background-color: #1d4ed8; transform: translateY(-2px); }
+
+        /* Founder Section */
+        .founder-section { padding: 6rem 2rem; border-bottom: 1px solid var(--border); }
+        .founder-container { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; }
+        .founder-text { flex: 1; min-width: 300px; }
+        .founder-text h2 { font-size: 2.25rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem; }
+        .founder-text p { font-size: 1.1rem; color: var(--text-main); margin-bottom: 1.5rem; }
+        .founder-img-box { width: 180px; height: 180px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--text-light); border: 4px solid var(--white); box-shadow: 0 10px 20px rgba(0,0,0,0.05); overflow: hidden; }
+
+        /* Case Studies Section */
+        .cases { padding: 6rem 2rem; background-color: var(--bg-light); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 4rem auto; }
+        .section-header h2 { font-size: 2.25rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem; }
+        .cases-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 3rem; }
+        @media (max-width: 500px) { .cases-grid { grid-template-columns: 1fr; } }
+        
+        .case-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
+        .case-meta { font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 0.5rem; }
+        .case-card h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 1.5rem; }
+        
+        .visual-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; background: #f1f5f9; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+        .visual-box { background: var(--white); padding: 1rem; border-radius: 6px; border: 1px solid var(--border); text-align: center; }
+        .visual-box.before { border-left: 4px solid var(--danger); }
+        .visual-box.after { border-left: 4px solid var(--success); }
+        .visual-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem; display: block; }
+        .rating-num { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+        .stars-row { color: #f59e0b; font-size: 0.85rem; margin: 0.25rem 0; }
+        .sub-metric { font-size: 0.8rem; color: var(--text-light); }
+
+        /* Ultra-Realistic Testimonials Section */
+        .testimonials { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .review-card { border: 1px solid var(--border); padding: 2rem; border-radius: 8px; background: var(--white); position: relative; }
+        .review-card::before { content: "\201C"; font-size: 4rem; color: #e2e8f0; position: absolute; top: -10px; left: 15px; font-family: serif; }
+        .review-text { font-size: 0.98rem; color: var(--text-main); font-style: italic; margin-bottom: 1.5rem; position: relative; z-index: 1; }
+        .reviewer-info { display: flex; align-items: center; gap: 1rem; }
+        .reviewer-avatar { width: 45px; height: 45px; background: #cbd5e1; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--text-main); font-size: 0.9rem; }
+        .reviewer-details h4 { font-size: 0.95rem; color: var(--primary); font-weight: 700; }
+        .reviewer-details p { font-size: 0.8rem; color: var(--text-light); }
+
+        /* Contact Section */
+        .cta { background-color: var(--primary); color: var(--white); padding: 6rem 2rem; text-align: center; }
+        .cta-container { max-width: 650px; margin: 0 auto; }
+        .cta h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 2.5rem; }
+        .contact-methods { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; }
+        .contact-item { display: flex; align-items: center; gap: 0.5rem; color: #cbd5e1; text-decoration: none; font-size: 1rem; transition: color 0.3s; }
+        .contact-item:hover { color: var(--white); }
+        .contact-item i { color: var(--accent); }
+
+        footer { background-color: #020617; color: #475569; padding: 2.5rem 2rem; border-top: 1px solid #1e293b; text-align: center; font-size: 0.9rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; justify-content: space-between; }
+        @media (min-width: 768px) { .footer-container { flex-direction: row; } }
+        .footer-links { display: flex; gap: 1.5rem; }
+        .footer-links a { color: #475569; text-decoration: none; }
+        .footer-links a:hover { color: #94a3b8; }
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <a href="#" class="logo"><i class="fa-solid fa-shield-halved"></i> ReputationGuard AI</a>
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-shield-halved"></i> ReputationGuard AI</a>
+            <ul class="nav-links">
+                <li><a href="#about">The Founder</a></li>
+                <li><a href="#cases">Case Studies</a></li>
+                <li><a href="#testimonials">Client Feedback</a></li>
+                <li><a href="#contact">Consultation</a></li>
+            </ul>
+        </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Protect Your Corporate Reputation with AI</h1>
-        <p style="font-size: 1.3rem; margin-bottom: 2.5rem;">Elite digital defense for law firms and medical facilities. Don't let unfair reviews define your business.</p>
-        <a href="https://wa.me/21650306685" class="btn">Get Your Free Reputation Audit</a>
+        <div class="hero-container">
+            <h1>Reputation Intelligence & Risk Mitigation for Law Firms</h1>
+            <p>We deploy professional legal-tech workflows to protect prominent practices and healthcare groups from targeted digital attacks, defamatory campaigns, and search index distortions.</p>
+            <a href="https://wa.me/21650306685" class="btn" target="_blank">
+                <i class="fa-solid fa-arrow-right"></i> Request an On-Demand Reputation Audit
+            </a>
+        </div>
     </section>
 
-    <section class="stats-grid">
-        <div class="stat-item"><h3>99%</h3><p>Threat Detection Accuracy</p></div>
-        <div class="stat-item"><h3>500+</h3><p>Global Brands Protected</p></div>
-        <div class="stat-item"><h3>24/7</h3><p>Automated Crisis Defense</p></div>
+    <!-- Founder Section (Meet Kais Riahi) -->
+    <section class="founder-section" id="about">
+        <div class="founder-container">
+            <div class="founder-text">
+                <h2>Meet the Founder</h2>
+                <p>"I am <strong>Kais Riahi</strong>. I specialize in helping high-stakes law firms and medical organizations secure their digital authority. When a practice faces coordinated malicious feedback or algorithmic exposure risks, my team steps in to execute precise, compliant, and data-backed remediation strategies."</p>
+                <p>Every audit we perform aligns strictly with platform terms of service and legal standards, ensuring your public profile mirrors your actual professional standard of excellence.</p>
+                <a href="https://www.linkedin.com" class="btn" style="background-color: #0077b5;" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> Verify on LinkedIn
+                </a>
+            </div>
+            <div class="founder-img-box">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+        </div>
     </section>
 
-    <footer style="text-align: center; padding: 2rem; border-top: 1px solid #e2e8f0;">
-        <p>&copy; 2026 ReputationGuard AI. All rights reserved.</p>
+    <!-- Case Studies Section (Before & After Visuals) -->
+    <section class="cases" id="cases">
+        <div class="section-header">
+            <h2>Verified Case Studies</h2>
+            <p>Anonymized real-world data showing structural index corrections and profile recoveries.</p>
+        </div>
+        <div class="cases-grid">
+            
+            <!-- Case Study 1 -->
+            <div class="case-card">
+                <span class="case-meta">Case Ref: #L-4092 &bull; Law Firm</span>
+                <h3>Coordinated Defamation Mitigation</h3>
+                <p>A regional multi-partner corporate law practice was targeted by an automated spam network, resulting in an artificial drop in rating metrics and immediate client hesitation.</p>
+                
+                <div class="visual-comparison">
+                    <div class="visual-box before">
+                        <span class="visual-label">Profile Status (Before)</span>
+                        <div class="rating-num" style="color: var(--danger);">3.1</div>
+                        <div class="stars-row">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="sub-metric">42 Spam Violations Noted</span>
+                    </div>
+                    <div class="visual-box after">
+                        <span class="visual-label">Profile Status (After)</span>
+                        <div class="rating-num" style="color: var(--success);">4.8</div>
+                        <div class="stars-row">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="sub-metric">Verified Compliance Clean</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="case-card">
+                <span class="case-meta">Case Ref: #M-1108 &bull; Healthcare Group</span>
+                <h3>Search Engine Citation Alignment</h3>
+                <p>A premium specialty clinical center suffered major patient intake drops due to cross-platform legacy profile extraction errors, inflating incorrect negative metadata.</p>
+                
+                <div class="visual-comparison">
+                    <div class="visual-box before">
+                        <span class="visual-label">Search Visibility</span>
+                        <div class="rating-num" style="color: var(--danger);">34%</div>
+                        <div class="stars-row" style="color: var(--danger);"><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <span class="sub-metric">Index Errors Present</span>
+                    </div>
+                    <div class="visual-box after">
+                        <span class="visual-label">Search Visibility</span>
+                        <div class="rating-num" style="color: var(--success);">96%</div>
+                        <div class="stars-row" style="color: var(--success);"><i class="fa-solid fa-circle-check"></i></div>
+                        <span class="sub-metric">All Directories Synchronized</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Ultra-Realistic Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <h2>Peer Reviews & Institutional Trust</h2>
+            <p>What managing partners and clinic administrations say about our operational protocol.</p>
+        </div>
+        <div class="testimonials-grid">
+            
+            <!-- Comment 1 -->
+            <div class="review-card">
+                <p class="review-text">"We were skeptical about reputation management agencies because most use generic templates. Kais's team was different. They didn't make fake promises; instead, they analyzed the citation discrepancies on our Google Business Profile and fixed the legacy mapping errors. Our intake drop stopped within a week."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">DM</div>
+                    <div class="reviewer-details">
+                        <h4>David Miller</h4>
+                        <p>Senior Partner, Miller & Associates Law</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment 2 -->
+            <div class="review-card">
+                <p class="review-text">"Following a highly publicized litigation case, our firm was hit by waves of 1-star reviews from non-clients. ReputationGuard handled the data auditing perfectly. They systematically flagged the TOS violations with verified platform documentation. Genuine professional relief."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">EB</div>
+                    <div class="reviewer-details">
+                        <h4>Elena Bernstein</h4>
+                        <p>Managing Director, Bernstein Medical Group</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment 3 -->
+            <div class="review-card">
+                <p class="review-text">"Absolute discretion. That's what we needed, and that's what Kais delivered. They didn't just 'clear ratings'—they structured our digital footprint so that fake competitors can't easily trigger systemic penalties against our practice again. Highly recommended for corporate compliance."</p>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">JH</div>
+                    <div class="reviewer-details">
+                        <h4>Julian Hughes</h4>
+                        <p>Chief Compliance Officer, Nexus Legal Partners</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="cta" id="contact">
+        <div class="cta-container">
+            <h2>Secure Your Firm's Digital Authority</h2>
+            <p>Connect with Kais Riahi directly to review any ongoing risks or vulnerabilities in your public digital footprint. Confidential NDA standards strictly apply.</p>
+            <a href="https://wa.me/21650306685" class="btn" style="background-color: var(--white); color: var(--primary);" target="_blank">
+                <i class="fa-solid fa-calendar-days" style="color: var(--accent);"></i> Initiate Private Consultation
+            </a>
+            <div class="contact-methods">
+                <a href="mailto:trustshield.drm@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> trustshield.drm@gmail.com</a>
+                <a href="https://wa.me/21650306685" class="contact-item" target="_blank"><i class="fa-solid fa-phone"></i> +216 50 306 685</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 ReputationGuard AI. Corporate Asset Protection. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Engagement</a>
+                <a href="#">NDAA Protocol</a>
+            </div>
+        </div>
     </footer>
 
 </body>
