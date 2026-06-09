@@ -57,8 +57,13 @@
             background-color: #20ba5a;
         }
 
-        /* Hero Section */
-        .hero { padding: 7rem 2rem 6rem 2rem; background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.06), transparent), var(--bg-light); text-align: center; }
+        /* Hero Section with Cinematic Background */
+        .hero { 
+            padding: 9rem 2rem 8rem 2rem; 
+            background: linear-gradient(rgba(248, 250, 252, 0.88), rgba(248, 250, 252, 0.95)), 
+                        url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; 
+            text-align: center; 
+        }
         .hero-container { max-width: 880px; margin: 0 auto; }
         h1 { font-size: 3.4rem; font-weight: 800; color: var(--primary); line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -0.03em; }
         .hero p { font-size: 1.3rem; color: var(--text-light); margin-bottom: 2.5rem; font-weight: 400; max-width: 750px; margin-left: auto; margin-right: auto; }
@@ -66,23 +71,43 @@
         .btn-main { display: inline-flex; align-items: center; gap: 0.6rem; background-color: var(--accent); color: var(--white); padding: 1.1rem 2.4rem; border-radius: 8px; font-weight: 700; font-size: 1.05rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25); }
         .btn-main:hover { background-color: #1d4ed8; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35); }
 
-        /* Founder Section (Clean & No LinkedIn) */
+        /* Founder Section */
         .founder-section { padding: 6.5rem 2rem; border-bottom: 1px solid var(--border); background-color: var(--white); }
         .founder-container { max-width: 1050px; margin: 0 auto; display: flex; align-items: center; gap: 5rem; flex-wrap: wrap; }
         .founder-text { flex: 1; min-width: 320px; }
         .founder-text h2 { font-size: 2.4rem; font-weight: 800; color: var(--primary); margin-bottom: 1.2rem; letter-spacing: -0.02em; }
         .founder-text p { font-size: 1.15rem; color: var(--text-main); margin-bottom: 1.5rem; line-height: 1.7; }
-        .founder-img-box { width: 160px; height: 160px; background: #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; color: var(--text-light); border: 2px solid var(--border); box-shadow: 0 8px 16px rgba(0,0,0,0.03); }
+        
+        .founder-img-box { 
+            width: 220px; 
+            height: 220px; 
+            background: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80') no-repeat center top/cover; 
+            border-radius: 16px; 
+            border: 1px solid var(--border); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06); 
+        }
 
-        /* Case Studies (Before/After HTML Simulation) */
+        /* NEW: Team Section (Our Specialists) */
+        .team-section { padding: 6.5rem 2rem; background-color: var(--white); border-bottom: 1px solid var(--border); }
+        .team-grid { max-width: 1200px; margin: 3.5rem auto 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+        .team-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--white); text-align: center; padding: 2.5rem 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.01); transition: transform 0.3s; }
+        .team-card:hover { transform: translateY(-5px); }
+        .team-avatar { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 3px solid #f1f5f9; }
+        .team-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem; }
+        .team-role { font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; display: block; }
+        .team-bio { font-size: 0.95rem; color: var(--text-light); line-height: 1.6; }
+
+        /* Verified Case Studies */
         .cases { padding: 6.5rem 2rem; background-color: var(--bg-light); border-bottom: 1px solid var(--border); }
         .section-header { text-align: center; max-width: 750px; margin: 0 auto 4.5rem auto; }
         .section-header h2 { font-size: 2.4rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem; letter-spacing: -0.02em; }
         .section-header p { font-size: 1.15rem; color: var(--text-light); }
-        .cases-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 3rem; }
+        .cases-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 3.5rem; }
         @media (max-width: 550px) { .cases-grid { grid-template-columns: 1fr; } }
         
-        .case-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 2.8rem; box-shadow: 0 4px 20px rgba(0,0,0,0.015); }
+        .case-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.015); overflow: hidden; display: flex; flex-direction: column; }
+        .case-img { width: 100%; height: 240px; object-fit: cover; border-bottom: 1px solid var(--border); }
+        .case-content { padding: 2.5rem; }
         .case-meta { font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem; letter-spacing: 0.05em; display: block; }
         .case-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 1.5rem; }
         
@@ -95,24 +120,29 @@
         .stars-row { color: #f59e0b; font-size: 0.9rem; margin-bottom: 0.4rem; }
         .sub-metric { font-size: 0.85rem; color: var(--text-light); font-weight: 500; }
 
-        /* Ultra-Realistic Testimonials Section */
+        /* Testimonials Section */
         .testimonials { padding: 6.5rem 2rem; max-width: 1200px; margin: 0 auto; }
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; margin-top: 3.5rem; }
         .review-card { border: 1px solid var(--border); padding: 2.5rem; border-radius: 12px; background: var(--white); position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.01); }
         .review-card::before { content: "\201C"; font-size: 4.5rem; color: #f1f5f9; position: absolute; top: -5px; left: 20px; font-family: serif; font-weight: bold; }
         .review-text { font-size: 1rem; color: var(--text-main); font-style: italic; margin-bottom: 2rem; position: relative; z-index: 1; line-height: 1.7; }
         .reviewer-info { display: flex; align-items: center; gap: 1rem; border-top: 1px solid #f1f5f9; padding-top: 1.25rem; }
-        .reviewer-avatar { width: 44px; height: 44px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary); font-size: 0.9rem; }
+        .reviewer-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); }
         .reviewer-details h4 { font-size: 1rem; color: var(--primary); font-weight: 700; }
         .reviewer-details p { font-size: 0.8rem; color: var(--text-light); font-weight: 500; }
 
-        /* Enterprise Contact CTA Section */
-        .cta { background-color: var(--primary); color: var(--white); padding: 6.5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+        /* Contact CTA Section */
+        .cta { 
+            background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; 
+            color: var(--white); 
+            padding: 7rem 2rem; 
+            text-align: center; 
+        }
         .cta-container { max-width: 700px; margin: 0 auto; position: relative; z-index: 2; }
         .cta h2 { font-size: 2.6rem; font-weight: 800; margin-bottom: 1.2rem; letter-spacing: -0.02em; }
         .cta p { color: #94a3b8; font-size: 1.2rem; margin-bottom: 2.5rem; }
         
-        /* Glowing WhatsApp Button inside CTA */
         .btn-whatsapp-large {
             display: inline-flex;
             align-items: center;
@@ -128,51 +158,34 @@
             animation: pulseGlow 2s infinite;
             transition: all 0.3s ease;
         }
-        .btn-whatsapp-large:hover {
-            transform: translateY(-2px);
-            background-color: #20ba5a;
-            box-shadow: 0 0 35px rgba(37, 211, 102, 0.8);
-        }
+        .btn-whatsapp-large:hover { transform: translateY(-2px); background-color: #20ba5a; box-shadow: 0 0 35px rgba(37, 211, 102, 0.8); }
 
         .contact-methods { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-top: 3rem; border-top: 1px solid #1e293b; padding-top: 2rem; }
         .contact-item { display: flex; align-items: center; gap: 0.6rem; color: #94a3b8; text-decoration: none; font-size: 1rem; font-weight: 500; transition: color 0.3s; }
         .contact-item:hover { color: var(--white); }
         .contact-item i { color: var(--accent); }
 
-        /* Sticky Floating WhatsApp Widget for Mobile/Desktop */
-        .whatsapp-floating {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--whatsapp-color);
-            color: var(--white);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 9999;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .whatsapp-floating:hover {
-            transform: scale(1.1);
-            background-color: #20ba5a;
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-        }
+        /* Floating WhatsApp Widget */
+        .whatsapp-floating { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp-color); color: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 9999; transition: all 0.3s ease; text-decoration: none; }
+        .whatsapp-floating:hover { transform: scale(1.1); background-color: #20ba5a; }
 
         /* Footer */
         footer { background-color: #020617; color: #475569; padding: 2.5rem 2rem; border-top: 1px solid #1e293b; text-align: center; font-size: 0.9rem; font-weight: 500; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; align-items: center; justify-content: space-between; }
         @media (min-width: 768px) { .footer-container { flex-direction: row; } }
         .footer-links { display: flex; gap: 2rem; }
-        .footer-links a { color: #475569; text-decoration: none; transition: color 0.3s; }
-        .footer-links a:hover { color: #94a3b8; }
+        .footer-links button { background: none; border: none; color: #475569; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: color 0.3s; }
+        .footer-links button:hover { color: #94a3b8; }
 
-        /* Keyframe Animations */
+        /* NEW: Modal Popups for Privacy & Terms */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 6, 23, 0.7); backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center; padding: 2rem; }
+        .modal-content { background: var(--white); padding: 3rem; border-radius: 16px; max-width: 700px; width: 100%; max-height: 80vh; overflow-y: auto; border: 1px solid var(--border); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); text-align: left; }
+        .modal-content h2 { font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem; font-weight: 800; }
+        .modal-content h3 { font-size: 1.2rem; color: var(--primary); margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 700; }
+        .modal-content p { color: var(--text-main); font-size: 1rem; margin-bottom: 1rem; }
+        .close-modal { background: var(--primary); color: var(--white); padding: 0.6rem 1.5rem; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; margin-top: 2rem; float: right; transition: background 0.3s; }
+        .close-modal:hover { background: var(--accent); }
+
         @keyframes pulseGlow {
             0% { transform: scale(1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
             50% { transform: scale(1.03); box-shadow: 0 0 30px rgba(37, 211, 102, 0.7); }
@@ -188,11 +201,10 @@
             <a href="#" class="logo"><i class="fa-solid fa-shield-halved"></i> ReputationGuard AI</a>
             <ul class="nav-links">
                 <li><a href="#about">The Founder</a></li>
+                <li><a href="#team">Our Specialists</a></li>
                 <li><a href="#cases">Case Studies</a></li>
                 <li><a href="#testimonials">Client Feedback</a></li>
-                <li><a href="#contact">Consultation</a></li>
                 <li>
-                    <!-- Glowing WhatsApp Action Button in Navbar -->
                     <a href="https://wa.me/21653685306" class="btn-glow" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i> WhatsApp Live
                     </a>
@@ -212,7 +224,7 @@
         </div>
     </section>
 
-    <!-- Founder Section (LinkedIn Fully Removed) -->
+    <!-- Founder Section -->
     <section class="founder-section" id="about">
         <div class="founder-container">
             <div class="founder-text">
@@ -220,83 +232,111 @@
                 <p>"I am <strong>Kais Riahi</strong>. I specialize in helping high-stakes law firms and medical organizations secure their digital authority. When a practice faces coordinated malicious feedback or algorithmic exposure risks, my team steps in to execute precise, compliant, and data-backed remediation strategies."</p>
                 <p>Every audit we perform aligns strictly with platform terms of service and legal standards, ensuring your public profile mirrors your actual professional standard of excellence.</p>
             </div>
-            <div class="founder-img-box">
-                <i class="fa-solid fa-user-tie"></i>
+            <div class="founder-img-box"></div>
+        </div>
+    </section>
+
+    <!-- NEW: Team Specialists Section -->
+    <section class="team-section" id="team">
+        <div class="section-header">
+            <h2>Our Specialist Roster</h2>
+            <p>Cross-functional experts executing your mitigation strategies with absolute precision.</p>
+        </div>
+        <div class="team-grid">
+            <!-- Specialist 1 -->
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Sarah Jenkins" class="team-avatar">
+                <h3>Sarah Jenkins</h3>
+                <span class="team-role">Head of Platform Compliance</span>
+                <p class="team-bio">Expert in Google Business Profile TOS and digital dispute orchestration. She handles systematic removal protocols.</p>
+            </div>
+            <!-- Specialist 2 -->
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" class="team-avatar">
+                <h3>Marcus Vance</h3>
+                <span class="team-role">Search Index Architect</span>
+                <p class="team-bio">Specializes in legal metadata restructuring and de-indexing erroneous defamatory platform links.</p>
+            </div>
+            <!-- Specialist 3 -->
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Dr. Amara Sterling" class="team-avatar">
+                <h3>Dr. Amara Sterling</h3>
+                <span class="team-role">Healthcare Data Liaison</span>
+                <p class="team-bio">Manages HIPAA compliance and medical directory synchronization protocols for hospital networks.</p>
             </div>
         </div>
     </section>
 
-    <!-- Case Studies Section (Before/After Proof) -->
+    <!-- Case Studies Section -->
     <section class="cases" id="cases">
         <div class="section-header">
             <h2>Verified Case Studies</h2>
             <p>Anonymized real-world data showing structural index corrections and profile recoveries.</p>
         </div>
         <div class="cases-grid">
-            
-            <!-- Case Study 1 -->
             <div class="case-card">
-                <span class="case-meta">Case Ref: #L-4092 &bull; Law Firm</span>
-                <h3>Coordinated Defamation Mitigation</h3>
-                <p>A regional multi-partner corporate law practice was targeted by an automated spam network, resulting in an artificial drop in rating metrics and immediate client hesitation.</p>
-                
-                <div class="visual-comparison">
-                    <div class="visual-box before">
-                        <span class="visual-label">Profile Status (Before)</span>
-                        <div class="rating-num" style="color: var(--danger);">3.1</div>
-                        <div class="stars-row">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Law Firm Mitigation" class="case-img">
+                <div class="case-content">
+                    <span class="case-meta">Case Ref: #L-4092 &bull; Law Practice Asset</span>
+                    <h3>Coordinated Defamation Mitigation</h3>
+                    <p>A regional multi-partner corporate law practice was targeted by an automated spam network, resulting in an artificial drop in rating metrics and immediate client hesitation.</p>
+                    <div class="visual-comparison">
+                        <div class="visual-box before">
+                            <span class="visual-label">Profile Status (Before)</span>
+                            <div class="rating-num" style="color: var(--danger);">3.1</div>
+                            <div class="stars-row">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                            </div>
+                            <span class="sub-metric">42 Spam Violations Noted</span>
                         </div>
-                        <span class="sub-metric">42 Spam Violations Noted</span>
-                    </div>
-                    <div class="visual-box after">
-                        <span class="visual-label">Profile Status (After)</span>
-                        <div class="rating-num" style="color: var(--success);">4.8</div>
-                        <div class="stars-row">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <div class="visual-box after">
+                            <span class="visual-label">Profile Status (After)</span>
+                            <div class="rating-num" style="color: var(--success);">4.8</div>
+                            <div class="stars-row">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="sub-metric">Verified Compliance Clean</span>
                         </div>
-                        <span class="sub-metric">Verified Compliance Clean</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Case Study 2 -->
             <div class="case-card">
-                <span class="case-meta">Case Ref: #M-1108 &bull; Healthcare Group</span>
-                <h3>Search Engine Citation Alignment</h3>
-                <p>A premium specialty clinical center suffered major patient intake drops due to cross-platform legacy profile extraction errors, inflating incorrect negative metadata.</p>
-                
-                <div class="visual-comparison">
-                    <div class="visual-box before">
-                        <span class="visual-label">Search Visibility</span>
-                        <div class="rating-num" style="color: var(--danger);">34%</div>
-                        <div class="stars-row" style="color: var(--danger);"><i class="fa-solid fa-circle-exclamation"></i></div>
-                        <span class="sub-metric">Index Errors Present</span>
-                    </div>
-                    <div class="visual-box after">
-                        <span class="visual-label">Search Visibility</span>
-                        <div class="rating-num" style="color: var(--success);">96%</div>
-                        <div class="stars-row" style="color: var(--success);"><i class="fa-solid fa-circle-check"></i></div>
-                        <span class="sub-metric">All Directories Synchronized</span>
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Medical Practice Correction" class="case-img">
+                <div class="case-content">
+                    <span class="case-meta">Case Ref: #M-1108 &bull; Healthcare Group Asset</span>
+                    <h3>Search Engine Citation Alignment</h3>
+                    <p>A premium specialty clinical center suffered major patient intake drops due to cross-platform legacy profile extraction errors, inflating incorrect negative metadata.</p>
+                    <div class="visual-comparison">
+                        <div class="visual-box before">
+                            <span class="visual-label">Search Visibility</span>
+                            <div class="rating-num" style="color: var(--danger);">34%</div>
+                            <div class="stars-row" style="color: var(--danger);"><i class="fa-solid fa-circle-exclamation"></i></div>
+                            <span class="sub-metric">Index Errors Present</span>
+                        </div>
+                        <div class="visual-box after">
+                            <span class="visual-label">Search Visibility</span>
+                            <div class="rating-num" style="color: var(--success);">96%</div>
+                            <div class="stars-row" style="color: var(--success);"><i class="fa-solid fa-circle-check"></i></div>
+                            <span class="sub-metric">All Directories Synchronized</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Ultra-Realistic Testimonials Section -->
+    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="section-header">
             <h2>Peer Reviews & Institutional Trust</h2>
             <p>What managing partners and clinic administrations say about our operational protocol.</p>
         </div>
         <div class="testimonials-grid">
-            
             <div class="review-card">
-                <p class="review-text">"We were skeptical about reputation management agencies because most use generic templates. Kais's team was different. They didn't make fake promises; instead, they analyzed the citation discrepancies on our Google Business Profile and fixed the legacy mapping errors. Our intake drop stopped within a week."</p>
+                <p class="review-text">"We were skeptical about reputation management agencies because most use generic templates. Kais's team was different. They analyzed the citation discrepancies on our Google Business Profile and fixed the legacy mapping errors."</p>
                 <div class="reviewer-info">
-                    <div class="reviewer-avatar">DM</div>
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80" alt="David Miller" class="reviewer-avatar">
                     <div class="reviewer-details">
                         <h4>David Miller</h4>
                         <p>Senior Partner, Miller & Associates Law</p>
@@ -305,9 +345,9 @@
             </div>
 
             <div class="review-card">
-                <p class="review-text">"Following a highly publicized litigation case, our firm was hit by waves of 1-star reviews from non-clients. ReputationGuard handled the data auditing perfectly. They systematically flagged the TOS violations with verified platform documentation. Genuine professional relief."</p>
+                <p class="review-text">"Following a highly publicized litigation case, our firm was hit by waves of 1-star reviews from non-clients. ReputationGuard handled the data auditing perfectly. Genuine professional relief."</p>
                 <div class="reviewer-info">
-                    <div class="reviewer-avatar">EB</div>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" alt="Elena Bernstein" class="reviewer-avatar">
                     <div class="reviewer-details">
                         <h4>Elena Bernstein</h4>
                         <p>Managing Director, Bernstein Medical Group</p>
@@ -316,30 +356,26 @@
             </div>
 
             <div class="review-card">
-                <p class="review-text">"Absolute discretion. That's what we needed, and that's what Kais delivered. They didn't just 'clear ratings'—they structured our digital footprint so that fake competitors can't easily trigger systemic penalties against our practice again. Highly recommended for corporate compliance."</p>
+                <p class="review-text">"Absolute discretion. That's what we needed, and that's what Kais delivered. They structured our digital footprint so that fake competitors can't easily trigger systemic penalties against our practice again."</p>
                 <div class="reviewer-info">
-                    <div class="reviewer-avatar">JH</div>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80" alt="Julian Hughes" class="reviewer-avatar">
                     <div class="reviewer-details">
                         <h4>Julian Hughes</h4>
                         <p>Chief Compliance Officer, Nexus Legal Partners</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Contact & Radiant CTA Section (Correct Number Fixed Everywhere) -->
+    <!-- Contact CTA Section -->
     <section class="cta" id="contact">
         <div class="cta-container">
             <h2>Secure Your Firm's Digital Authority</h2>
             <p>Connect with Kais Riahi directly to review any ongoing risks or vulnerabilities in your public digital footprint. Confidential NDA standards strictly apply.</p>
-            
-            <!-- Radiant Large WhatsApp Button -->
             <a href="https://wa.me/21653685306" class="btn-whatsapp-large" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> Initiate Confidential WhatsApp Session
             </a>
-            
             <div class="contact-methods">
                 <a href="mailto:trustshield.drm@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> trustshield.drm@gmail.com</a>
                 <a href="https://wa.me/21653685306" class="contact-item" target="_blank"><i class="fa-solid fa-phone"></i> +216 53 685 306</a>
@@ -348,21 +384,64 @@
     </section>
 
     <!-- Sticky Floating WhatsApp Widget -->
-    <a href="https://wa.me/21653685306" class="whatsapp-floating" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/21653685306" class="whatsapp-floating" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Footer -->
+    <!-- Footer with Modal Triggers -->
     <footer>
         <div class="footer-container">
             <p>&copy; 2026 ReputationGuard AI. Corporate Asset Protection. All rights reserved.</p>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Engagement</a>
-                <a href="#">NDAA Protocol</a>
+                <button onclick="openModal('privacy-modal')">Privacy Policy</button>
+                <button onclick="openModal('terms-modal')">Terms of Engagement</button>
             </div>
         </div>
     </footer>
+
+    <!-- INTERACTIVE MODAL 1: Privacy Policy -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <h2>Privacy & Data Protection Policy</h2>
+            <p><strong>Effective Date: January 1, 2026</strong></p>
+            <p>At ReputationGuard AI, we handle sensitive legal and medical organizational metrics. This policy dictates our strict confidentiality standards regarding incoming client data.</p>
+            <h3>1. Information We Secure</h3>
+            <p>We do not archive public search query structures or private communications outside of designated encrypted consultation sessions. Any credentials provided for temporary profile moderation are completely purged from our nodes upon engagement completion.</p>
+            <h3>2. NDA Alignment</h3>
+            <p>All data analysis, vulnerability hunting, and algorithmic error corrections fall under mutual non-disclosure agreements (NDA) automatically upon initiating contact.</p>
+            <button class="close-modal" onclick="closeModal('privacy-modal')">Close Window</button>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE MODAL 2: Terms of Engagement -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <h2>Terms of Professional Engagement</h2>
+            <p><strong>Effective Date: January 1, 2026</strong></p>
+            <p>By browsing this enterprise layout or requesting an automated compliance audit, you agree to the standard terms governing our platform remediation services.</p>
+            <h3>1. Permitted Remediation Workflows</h3>
+            <p>Our interventions are strictly bounded by platform Terms of Service (TOS). We execute authorized legal-tech flagging, index optimization, and data synchronization to remove unlawful, fake, or non-compliant digital content.</p>
+            <h3>2. Liability Limitations</h3>
+            <p>ReputationGuard AI operates as an independent risk-mitigation firm. All diagnostic reports are structured based on active third-party search engine API data and public directory indexing.</p>
+            <button class="close-modal" onclick="closeModal('terms-modal')">Close Window</button>
+        </div>
+    </div>
+
+    <!-- Modal Functionality JavaScript -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        // Close modal if user clicks outside of the main content box
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
 
 </body>
 </html>
